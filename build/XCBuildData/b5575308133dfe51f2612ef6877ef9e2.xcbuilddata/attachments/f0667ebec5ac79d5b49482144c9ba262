@@ -1,0 +1,39 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceries-primary.dia",
+    "emit-module-dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceries-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceries-primary-emit-module.dia",
+    "pch" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceries-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceries-primary.swiftdeps"
+  },
+  "/Users/mikewasauskee/iOS/projects/OnlineGroceries/OnlineGroceries/ContentView.swift" : {
+    "const-values" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mikewasauskee/iOS/projects/OnlineGroceries/OnlineGroceries/OnlineGroceriesApp.swift" : {
+    "const-values" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.swiftconstvalues",
+    "dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.d",
+    "diagnostics" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.dia",
+    "index-unit-output-path" : "/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.o",
+    "llvm-bc" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.bc",
+    "object" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.o",
+    "swift-dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp.swiftdeps",
+    "swiftmodule" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/OnlineGroceriesApp~partial.swiftmodule"
+  },
+  "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mikewasauskee/iOS/projects/OnlineGroceries/build/OnlineGroceries.build/Debug-iphoneos/OnlineGroceries.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
