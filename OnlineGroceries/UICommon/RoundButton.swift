@@ -9,13 +9,13 @@ import SwiftUI
 
 struct RoundButton: View {
     @State var title: String = "Title"
-    var didTap: (() -> ())?
+    var didTap: (() -> Void)?
     var body: some View {
         Button {
             didTap?()
         } label: {
             Text(title)
-                .font(.customfont(.semibold, fontSize: 18 ))
+                .font(.customfont(.semibold, fontSize: 18))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
         }
