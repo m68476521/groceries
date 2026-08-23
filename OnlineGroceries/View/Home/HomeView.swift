@@ -51,11 +51,10 @@ struct HomeView: View {
 
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 15) {
-                            ForEach(0...5, id: \.self) { index in
-                                ProductCell {
-
-                                }
-
+                            ForEach(homeVM.offerArray, id: \.id) { obj in
+                                ProductCell(obj: obj, didAddCart: {
+                                    
+                                })
                             }
                         }
                         .padding(.horizontal, 20)
@@ -70,11 +69,10 @@ struct HomeView: View {
 
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 15) {
-                            ForEach(0...5, id: \.self) { index in
-                                ProductCell {
-
-                                }
-
+                            ForEach(homeVM.bestArray, id: \.id) { obj in
+                                ProductCell(obj: obj, didAddCart: {
+                                    
+                                })
                             }
                         }
                         .padding(.horizontal, 20)
@@ -88,8 +86,8 @@ struct HomeView: View {
 
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 15) {
-                            ForEach(0...5, id: \.self) { index in
-                                CategoryCell(color: Color(hex: "F8A44C")) {
+                            ForEach(homeVM.typeArray, id: \.id) { obj in
+                                CategoryCell(obj: obj) {
 
                                 }
 
@@ -102,17 +100,16 @@ struct HomeView: View {
 
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 15) {
-                            ForEach(0...5, id: \.self) { index in
-                                ProductCell {
-
-                                }
-
+                            ForEach(homeVM.listArray, id: \.id) { obj in
+                                ProductCell(obj: obj, didAddCart: {
+                                    
+                                })
                             }
                         }
                         .padding(.horizontal, 20)
                         .padding(.vertical, 4)
                     }
-                    .padding(.bottom, 15)
+                    .padding(.bottom, 30)
 
                 }
                 .padding(.top, .topInsets)

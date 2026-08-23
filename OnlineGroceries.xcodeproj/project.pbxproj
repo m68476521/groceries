@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE384E332FFD454D002918FC /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = FE384E322FFD454D002918FC /* CountryPicker */; };
+		FEC8325A3024014A006FCB18 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEC832593024014A006FCB18 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC8325A3024014A006FCB18 /* SDWebImageSwiftUI in Frameworks */,
 				FE384E332FFD454D002918FC /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +87,7 @@
 			name = OnlineGroceries;
 			packageProductDependencies = (
 				FE384E322FFD454D002918FC /* CountryPicker */,
+				FEC832593024014A006FCB18 /* SDWebImageSwiftUI */,
 			);
 			productName = OnlineGroceries;
 			productReference = FEC281FB2FFC6386003C27B0 /* OnlineGroceries.app */;
@@ -116,6 +119,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				FE384E312FFD454D002918FC /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				FEC832583024014A006FCB18 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FEC281FC2FFC6386003C27B0 /* Products */;
@@ -300,6 +304,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnlineGroceries/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +342,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OnlineGroceries/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +401,14 @@
 				minimumVersion = 2.0.3;
 			};
 		};
+		FEC832583024014A006FCB18 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -402,6 +416,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE384E312FFD454D002918FC /* XCRemoteSwiftPackageReference "CountryPicker" */;
 			productName = CountryPicker;
+		};
+		FEC832593024014A006FCB18 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEC832583024014A006FCB18 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
