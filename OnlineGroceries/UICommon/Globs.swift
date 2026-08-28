@@ -13,6 +13,9 @@ struct Globs {
     static let SV_LOGIN = BASE_URL + "login"
     static let SV_SIGN_UP = BASE_URL + "sign_up"
     static let SV_HOME = BASE_URL + "home"
+    static let SV_PRODUCT_DETAIL = BASE_URL + "product_detail"
+    static let SV_ADD_REMOVE_FAVORITE = BASE_URL + "add_remove_favorite"
+    static let SV_FAVORITE_LIST = BASE_URL + "favorite_list"
 
     static let userPayload = "user_payload"
     static let userLogin = "user_login"

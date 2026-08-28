@@ -12,9 +12,21 @@ struct ProductCell: View {
     @State var obj: ProductModel = ProductModel(dict: [:])
     var didAddCart: (() -> Void)?
     var body: some View {
-        VStack {
+        NavigationLink {
+            ProductDetailsView(detailVM: ProductDetailViewModel(prodObj: obj))
+        } label: {
+            //            Image("add")
+            //                .resizable()
+            //                .scaledToFit()
+            //                .frame(width: 15, height: 15)
+            //        }
+            //        .frame(width: 40, height: 40)
+            //        .background(Color.primary)
+            //        .cornerRadius(15)
             
-            WebImage(url: URL(string: obj.image)) { image in
+            VStack {
+                
+                WebImage(url: URL(string: obj.image)) { image in
                     image.resizable()
                 }
                 placeholder: {
@@ -28,52 +40,53 @@ struct ProductCell: View {
                 .scaledToFit()
                 .frame(width: 100, height: 80)
                 
-
-            Spacer()
-
-            Text(obj.name)
-                .font(.customfont(.bold, fontSize: 16))
-                .foregroundColor(.primaryText)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-
-            Text("\(obj.unitValue)\(obj.unitName)")
-                .font(.customfont(.medium, fontSize: 14))
-                .foregroundColor(.secondaryText)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-
-            Spacer()
-
-            HStack {
-                Text("$\(obj.offerPrice ?? obj.price, specifier: "%.2f")")
-                    .font(.customfont(.semibold, fontSize: 18))
-                    .foregroundColor(.primaryText)
-                    .frame(
-                        minWidth: 0,
-                        maxWidth: .infinity,
-                        alignment: .leading
-                    )
-
+                
                 Spacer()
-
-                Button {
-                    didAddCart?()
-                } label: {
-                    Image("add")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 15, height: 15)
+                
+                Text(obj.name)
+                    .font(.customfont(.bold, fontSize: 16))
+                    .foregroundColor(.primaryText)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                
+                Text("\(obj.unitValue)\(obj.unitName)")
+                    .font(.customfont(.medium, fontSize: 14))
+                    .foregroundColor(.secondaryText)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                
+                Spacer()
+                
+                HStack {
+                    Text("$\(obj.offerPrice ?? obj.price, specifier: "%.2f")")
+                        .font(.customfont(.semibold, fontSize: 18))
+                        .foregroundColor(.primaryText)
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            alignment: .leading
+                        )
+                    
+                    Spacer()
+                    
+                    Button {
+                        didAddCart?()
+                    } label: {
+                        Image("add")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 15, height: 15)
+                    }
+                    .frame(width: 40, height: 40)
+                    .background(Color.primary)
+                    .cornerRadius(15)
                 }
-                .frame(width: 40, height: 40)
-                .background(Color.primary)
-                .cornerRadius(15)
             }
+            .padding(15)
+            .frame(width: 180, height: 230)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.primaryText.opacity(0.5), lineWidth: 1)
+            )
         }
-        .padding(15)
-        .frame(width: 180, height: 230)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.primaryText.opacity(0.5), lineWidth: 1)
-        )
     }
 }
 

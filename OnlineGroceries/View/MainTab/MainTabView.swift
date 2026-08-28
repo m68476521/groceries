@@ -16,7 +16,7 @@ struct MainTabView: View {
                 HomeView().tag(0)
                 ExploreView().tag(1)
                 ExploreView().tag(2)
-                ExploreView().tag(3)
+                FavoriteView().tag(3)
                 ExploreView().tag(4)
             }
 
