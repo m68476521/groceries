@@ -26,6 +26,12 @@ class HomeViewModel: ObservableObject {
  
     //MARK: ServiceCall
     
+    func updateUI(for tap: Int) {
+        selectTab = tap
+        print("MKE \(tap)")
+        print("MKE \(selectTab)")
+    }
+    
     func serviceCallList() {
         ServiceCall.post(
             parameter: [:],

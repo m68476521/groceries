@@ -11,7 +11,7 @@ struct TabButton: View {
     @State var title: String = "title"
     @State var icon: String = "store_tab"
     var isSelected: Bool = false
-    var didSelect: (() -> Void)
+    var didSelect: (() -> ())
 
     var body: some View {
         Button {

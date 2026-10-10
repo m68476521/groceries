@@ -38,6 +38,11 @@ class MainViewModel: ObservableObject {
         //        txtEmail = "test@test.com"
         //        txtPassword = "123456"
     }
+    
+    func logout() {
+        Utils.UDSET(data: false, key: Globs.userLogin)
+        isUserLogin = false 
+    }
 
     func serviceCallLogin() {
 

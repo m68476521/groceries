@@ -21,8 +21,10 @@ struct FavoriteView: View {
                     })
                 }
                 .padding(20)
+                .padding(.top, .topInsets + 46)
+                .padding(.bottom, .bottomInsets + 60)
             }
-            .padding(.top, .topInsets + 46)
+            
             
             VStack {
                 HStack {
@@ -39,8 +41,13 @@ struct FavoriteView: View {
                 .shadow(color: Color.black.opacity(0.2) ,radius: 2)
                 
                 Spacer()
+                
+                RoundButton(title: "Add all to cart")
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, .bottomInsets + 70)
             
             }
+            
         }
         .onAppear {
             favVM.serviceCallList()

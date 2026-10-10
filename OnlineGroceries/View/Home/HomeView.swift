@@ -53,7 +53,12 @@ struct HomeView: View {
                         LazyHStack(spacing: 15) {
                             ForEach(homeVM.offerArray, id: \.id) { obj in
                                 ProductCell(obj: obj, didAddCart: {
-                                    
+                                    CartViewModel.shared.serviceCallAddToCart(
+                                        prodId: obj.id,
+                                       qty: 1) { isDone, msg in
+                                           self.homeVM.errorMessage = msg
+                                           self.homeVM.showError = true
+                                    }
                                 })
                             }
                         }
@@ -71,7 +76,12 @@ struct HomeView: View {
                         LazyHStack(spacing: 15) {
                             ForEach(homeVM.bestArray, id: \.id) { obj in
                                 ProductCell(obj: obj, didAddCart: {
-                                    
+                                    CartViewModel.shared.serviceCallAddToCart(
+                                        prodId: obj.id,
+                                       qty: 1) { isDone, msg in
+                                           self.homeVM.errorMessage = msg
+                                           self.homeVM.showError = true
+                                    }
                                 })
                             }
                         }
@@ -102,7 +112,12 @@ struct HomeView: View {
                         LazyHStack(spacing: 15) {
                             ForEach(homeVM.listArray, id: \.id) { obj in
                                 ProductCell(obj: obj, didAddCart: {
-                                    
+                                    CartViewModel.shared.serviceCallAddToCart(
+                                        prodId: obj.id,
+                                       qty: 1) { isDone, msg in
+                                           self.homeVM.errorMessage = msg
+                                           self.homeVM.showError = true
+                                    }
                                 })
                             }
                         }
@@ -113,12 +128,20 @@ struct HomeView: View {
 
                 }
                 .padding(.top, .topInsets)
+                .padding(.bottom, .bottomInsets + 46)
             }
         }
+        .alert(isPresented: $homeVM.showError, content: {
+            Alert(title: Text(Globs.appName),
+                  message: Text(homeVM.errorMessage),
+                  dismissButton: .default(Text("OK")))
+        })
         .ignoresSafeArea()
     }
 }
 
 #Preview {
-    HomeView()
+    NavigationView {
+        HomeView()
+    }
 }
