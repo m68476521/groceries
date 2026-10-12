@@ -20,7 +20,7 @@ struct AccountView: View {
                     VStack {
                         HStack {
                             Text("Code for Any")
-                                .font(.customfont(.bold, fontSize: 16))
+                                .font(.customfont(.bold, fontSize: 20))
                                 .foregroundColor(.primaryText)
                             
                             Image(systemName: "pencil")
@@ -32,7 +32,7 @@ struct AccountView: View {
                         .padding(.bottom, 2)
                         
                         Text("codeforAny@gmail.com")
-                            .font(.customfont(.medium, fontSize: 16))
+                            .font(.customfont(.regular, fontSize: 16))
                             .foregroundColor(.secondaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading )
                             .accentColor(.secondaryText)
@@ -47,41 +47,51 @@ struct AccountView: View {
                 ScrollView {
                     LazyVStack {
                         VStack {
-                            HStack {
-                                Image("a_order")
+                            
+                            AccountRaw(title: "Orders", icon: "a_order")
+                            
+                            AccountRaw(title: "My Details", icon: "a_my_detail")
+                            
+                            AccountRaw(title: "Delivery Address", icon: "a_delivery_address")
+                            
+                            AccountRaw(title: "Payment Methos", icon: "paymenth_methods")
+                            
+                            AccountRaw(title: "Promo Code", icon: "a_promocode")
+                        }
+                        
+                        VStack {
+                            AccountRaw(title: "Notifications", icon: "a_noitification")
+                            AccountRaw(title: "Help", icon: "a_help")
+                            AccountRaw(title: "About", icon: "a_about")
+                        }
+                        
+                        
+                        Button {
+                            MainViewModel.shared.logout()
+                        } label: {
+                            ZStack {
+                                Text("Log Out")
+                                    .font(.customfont(.semibold, fontSize: 18))
+                                    .foregroundColor(.primary)
+                                    .multilineTextAlignment(.center)
+                                HStack {
+                                    Spacer()
+                                    Image("logout")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
+                                        .padding(.trailing, 20)
+                                }
                             }
-                            Divider()
                         }
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
+                        .background(Color(hex: "F2F3F2"))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 15 )
+                       
                     }
                 }
-                
-                Spacer()
-                
-                Button {
-                    MainViewModel.shared.logout()
-                } label: {
-                    ZStack {
-                        Text("Log Out")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.primary)
-                            .multilineTextAlignment(.center)
-                        HStack {
-                            Spacer()
-                            Image("logout")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .padding(.trailing, 20)
-                        }
-                    }
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                .background(Color(hex: "F2F3F2"))
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 15 )
-                
-                
             }
             .padding(.bottom, .bottomInsets + 60)
         }

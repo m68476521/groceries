@@ -13,17 +13,15 @@ struct MainTabView: View {
     var body: some View {
         ZStack {
             if (homeVM.selectTab == 0) {
-//                HomeView()
-                MyCartView()
+                HomeView()
             } else if (homeVM.selectTab == 1) {
                 ExploreView()
             } else if (homeVM.selectTab == 2) {
-//                ExploreView()
                 MyCartView()
             } else if (homeVM.selectTab == 3) {
                 FavoriteView()
             } else if (homeVM.selectTab == 4) {
-                ExploreView()
+                AccountView()
             }
             
             VStack {

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Globs {
     static let appName = "Online Groceries"
-    static let BASE_URL = "http://localhost:3001/api/app/"
+//    static let BASE_URL = "http://localhost:3001/api/app/"
+    static let BASE_URL = "http://192.168.68.20:3001/api/app/"
     static let SV_LOGIN = BASE_URL + "login"
     static let SV_SIGN_UP = BASE_URL + "sign_up"
     static let SV_HOME = BASE_URL + "home"
