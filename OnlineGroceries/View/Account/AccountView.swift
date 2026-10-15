@@ -88,7 +88,7 @@ struct AccountView: View {
                         .background(Color(hex: "F2F3F2"))
                         .cornerRadius(10)
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 15 )
+                        .padding(.vertical, 15 )
                        
                     }
                 }
