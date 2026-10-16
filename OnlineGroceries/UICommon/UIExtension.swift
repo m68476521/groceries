@@ -39,34 +39,43 @@ extension CGFloat {
         return screenHeight * per
     }
     
+    // MARK: Safe area insets
+    //
+    // IMPORTANT: never touch UIWindow from inside a SwiftUI `body`.
+    // Reading the live window while SwiftUI is evaluating the view graph makes
+    // AttributeGraph detect a dependency cycle ("AttributeGraph: cycle detected
+    // through attribute ..."). When that happens SwiftUI silently drops the
+    // view's dependency tracking: @Published changes still land on the model,
+    // Button actions still fire, but the view never re-renders again.
+    //
+    // So the insets are read once from `refreshSafeAreaInsets()`, which must be
+    // called outside a view update (see `RootView.onAppear`), and cached here.
+    private(set) static var cachedSafeAreaInsets: UIEdgeInsets = .zero
+
+    static func refreshSafeAreaInsets() {
+        cachedSafeAreaInsets = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?
+            .safeAreaInsets ?? .zero
+    }
+
     static var topInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.top
-        }
-        return 0.0
+        return Double(cachedSafeAreaInsets.top)
     }
-    
+
     static var bottomInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.bottom
-        }
-        return 0.0
+        return Double(cachedSafeAreaInsets.bottom)
     }
-    
+
     static var horizontalInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.left + keyWindow.safeAreaInsets.right
-        }
-        return 0.0
+        return Double(cachedSafeAreaInsets.left + cachedSafeAreaInsets.right)
     }
-    
+
     static var verticalInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.top + keyWindow.safeAreaInsets.bottom
-        }
-        return 0.0
+        return Double(cachedSafeAreaInsets.top + cachedSafeAreaInsets.bottom)
     }
-    
+
 }
 
 extension Color {

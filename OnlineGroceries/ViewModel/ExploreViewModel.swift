@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 class ExploreViewModel: ObservableObject {
-    static var shared: ExploreViewModel = ExploreViewModel()
+    static let shared: ExploreViewModel = ExploreViewModel()
 
     @Published var txtSearch: String = ""
     @Published var showError: Bool = false

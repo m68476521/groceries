@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct FavoriteView: View {
     
-    @StateObject var favVM = FavoritesViewModel.shared
+    @ObservedObject var favVM = FavoritesViewModel.shared
     var body: some View {
         ZStack {
             

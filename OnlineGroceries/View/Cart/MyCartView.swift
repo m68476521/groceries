@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyCartView: View {
     
-    @StateObject var cartVM = CartViewModel.shared
+    @ObservedObject var cartVM = CartViewModel.shared
     
     var body: some View {
         ZStack{

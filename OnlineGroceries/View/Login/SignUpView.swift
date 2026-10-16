@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var mainVM = MainViewModel.shared
+    @ObservedObject var mainVM = MainViewModel.shared
     var body: some View {
         ZStack {
             Image("bottom_bg")

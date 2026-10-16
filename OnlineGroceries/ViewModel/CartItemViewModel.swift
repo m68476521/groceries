@@ -10,7 +10,7 @@ import SwiftUI
 
 // This is new UNUSED
 class CartItemViewModel: ObservableObject {
-    static var shared: CartItemViewModel = CartItemViewModel()
+    static let shared: CartItemViewModel = CartItemViewModel()
 
     @Published var showError: Bool = false
     @Published var errorMessage = ""

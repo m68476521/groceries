@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     
-    @StateObject var exploreVM = ExploreViewModel.shared
+    @ObservedObject var exploreVM = ExploreViewModel.shared
     @State var txtSearch: String = ""
     
     var columns = [

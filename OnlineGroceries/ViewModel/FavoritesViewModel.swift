@@ -10,7 +10,7 @@ import Combine
 
 
 class FavoritesViewModel: ObservableObject {
-    static var shared: FavoritesViewModel = FavoritesViewModel()
+    static let shared: FavoritesViewModel = FavoritesViewModel()
 
     @Published var showError: Bool = false
     @Published var errorMessage = ""

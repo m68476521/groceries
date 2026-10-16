@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var loginVM = MainViewModel.shared
+    @ObservedObject var loginVM = MainViewModel.shared
 
     var body: some View {
         ZStack {

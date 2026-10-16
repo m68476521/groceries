@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 class MainViewModel: ObservableObject {
-    static var shared: MainViewModel = MainViewModel()
+    static let shared: MainViewModel = MainViewModel()
 
     @Published var txtUsername: String = ""
     @Published var txtEmail: String = ""
