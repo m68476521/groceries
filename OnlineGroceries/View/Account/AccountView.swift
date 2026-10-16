@@ -52,7 +52,11 @@ struct AccountView: View {
                             
                             AccountRaw(title: "My Details", icon: "a_my_detail")
                             
-                            AccountRaw(title: "Delivery Address", icon: "a_delivery_address")
+                            NavigationLink {
+                                DeliveryAddressView()
+                            } label : {
+                                AccountRaw(title: "Delivery Address", icon: "a_delivery_address")
+                            }
                             
                             AccountRaw(title: "Payment Methos", icon: "paymenth_methods")
                             
@@ -100,5 +104,7 @@ struct AccountView: View {
 }
 
 #Preview {
-    AccountView()
+    NavigationView{
+        AccountView()
+    }
 }

@@ -54,15 +54,16 @@ struct DeliveryAddressView: View {
                             
                             VStack {
                                 Spacer()
-                                Button {
-                                    
+                                
+                                NavigationLink {
+                                    AddDeliveryAddressView(isEdit: true, editObj: obj)
                                 } label: {
                                     Image(systemName: "pencil")
                                         .resizable()
                                         .frame(width: 20, height: 20)
                                         .foregroundColor(.primary)
-                                }
-                                .padding(.bottom, 8)
+                                }.padding(.bottom, 8)
+                            
                                 
                                 Button {
                                     
@@ -125,7 +126,7 @@ struct DeliveryAddressView: View {
             
         }
         .onAppear {
-            
+            addressVM.serviceCallList()
         }
         .navigationTitle("")
         .navigationBarHidden(true)
@@ -135,5 +136,8 @@ struct DeliveryAddressView: View {
 }
 
 #Preview {
-    DeliveryAddressView()
+    NavigationView {
+        DeliveryAddressView()
+    }
+    
 }
