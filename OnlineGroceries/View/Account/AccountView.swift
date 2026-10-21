@@ -60,7 +60,11 @@ struct AccountView: View {
                             
                             AccountRaw(title: "Payment Methos", icon: "paymenth_methods")
                             
-                            AccountRaw(title: "Promo Code", icon: "a_promocode")
+                            NavigationLink {
+                                PromoCodeView()
+                            } label : {
+                                AccountRaw(title: "Promo Code", icon: "a_promocode")
+                            }
                         }
                         
                         VStack {
